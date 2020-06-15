@@ -147,18 +147,21 @@ header.masthead .bg-circle-4 {
 }
 
 .btn-secondary {
-  background-color: #ff6a00;
-  border-color: #ff6a00;
+
+  border-color: #ffffff;
+  background-color: rgb(173, 186, 230);
 }
 
 .btn-secondary:active, .btn-secondary:focus, .btn-secondary:hover {
-  background-color: #cc5500 !important;
-  border-color: #cc5500 !important;
+  background-color: #002897!important;
+  border-color: #002897 !important;
 }
 
 .btn-secondary:focus {
-  box-shadow: 0 0 0 0.2rem rgba(255, 106, 0, 0.5);
+  box-shadow: 0 0 0 0.2rem rgb(173, 186, 230);
 }
+
+
 
 .info-box {
   background-color: #0e93d1ad;
@@ -166,3 +169,24 @@ header.masthead .bg-circle-4 {
   padding: 20px 20px 20px 20px;
 
 }
+
+.mission-panel:hover, .mission-panel{
+ 
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+
+.mission-panel:hover {
+  padding-top: 25px;
+  transform: scale(1.05);
+}
+
+
+.mission-panel{
+  transform: scale(1);
+  
+}
+
