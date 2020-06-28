@@ -59,7 +59,7 @@ header.masthead {
   overflow: hidden;
   padding-top: calc(7rem + 72px);
   padding-bottom: 7rem;
-  background-image: url(../img/masks_stacked.jpeg);
+  background-image: url(../img/donation1.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: scroll;
@@ -164,7 +164,7 @@ header.masthead .bg-circle-4 {
 
 
 .info-box {
-  background-color: #0e93d1ad;
+  background-color: #0e93d175;
 
   padding: 20px 20px 20px 20px;
 
@@ -188,5 +188,55 @@ header.masthead .bg-circle-4 {
 .mission-panel{
   transform: scale(1);
   
+}
+
+.dropdown-style{
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  background-color: rgba(0, 0, 0, 0);
+
+   
+
+}
+
+.dropdown-menu-style{
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  background-color: rgba(0, 0, 0, 0.7);
+
+   
+
+}
+
+.contact-us-primary{
+  position: relative;
+  overflow: hidden;
+  padding-top: calc(7rem + 72px);
+  padding-bottom: 7rem;
+  background-image: url(../img/aboutimg.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
+
+}
+
+.contact-us-header {
+  
+  background-color: #fffffff5;
+  
+
+  padding: 20px 20px 20px 20px;
+
+}
+
+.contact-heading {
+  font-size: 5rem;
+  color: rgb(0, 0, 0);
+  opacity: 80%;
 }
 

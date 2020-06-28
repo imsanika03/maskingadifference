@@ -20,9 +20,33 @@
   <!-- Custom styles for this template -->
   <link href="css/one-page-wonder.css" rel="stylesheet">
 
+  <script type = "text/javascript">
+    function displayNextImage() {
+      x = (x === images.length - 1) ? 0 : x + 1;
+
+      var imageHead = document.getElementById("img");
+      imageHead.style.backgroundImage = "url(" + images[x] + ")";
+    }
+
+
+    function startTimer() {
+        setInterval(displayNextImage, 3000);
+    }
+
+    var images = [], x = -1;
+    images[0] = "img/donation4.jpg";
+    images[1] = "img/donation2.jpg";
+    images[2] = "img/donation3.jpg";
+    images[3] = "img/donation1.jpg";
+    images[4] = "img/masks_stacked.jpeg";
+</script>
+
+
+    
+
 </head>
 
-<body>
+<body onload = "startTimer()">
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
@@ -52,25 +76,35 @@
             <a class="nav-link" href="https://www.instagram.com/maskingadifference/">Updates</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#team-info">More</a>
+            <div class="dropdown">
+              <button class="dropdown-style nav-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                More
+              </button>
+              <div class="dropdown-menu-style dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="nav-link" href="https://maskingadifference.wixsite.com/home/copy-of-about">Team</a>
+                <a class="nav-link" href="https://maskingadifference.wixsite.com/home/donor-list">Donor List</a>
+                <a class="nav-link" href="contact-us.html">Contact</a>
+              </div>
+            </div>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <header class="masthead text-center text-white">
+  <header id="img" class="masthead text-center text-white">
     <div class="masthead-content">
       <div class="container">
         <div class="info-box mission-panel">
           <h1 class="masthead-heading mb-0">Ma(s)king A Difference</h1>
-          <h2 class="masthead-subheading mb-0">Let's "Ma(s)k a Difference" together!</h2>
+          <h2 class="masthead-subheading mb-0">Let's <q>Ma(s)k a Difference</q> together!</h2>
         </div>
         <a href="#infopanel" class="btn btn-primary btn-xl rounded-pill mt-5">Learn More</a>
       </div>
     </div>
   
   </header>
+
 
   <section id="infopanel" class="masthead text-center text-white" style="background-color: lightblue;">
     <div class="masthead-content">
@@ -93,8 +127,8 @@
             <img src="img/president-award-logo.jpg" alt="">
         </div>
         <div style="padding-left: 10%; " class="col-lg-6 ">
-            <h2 class="display-4">Recieve The Presidential Service Award</h2>
-            <p>This is a great way to earn recognition for all the hard work and hours you are putting into helping the heroes and the vulnerable during these tough times. This would be an example of an award to include in college apps, resumes, etc. You will be receiving a certificate for your hours (award type and the number of hours vary). For more information please click on the "Learn More" button.</p>
+            <h2 class="display-4">Receive The Presidential Service Award</h2>
+            <p>This is a great way to earn recognition for all the hard work and hours you are putting into helping the heroes and the vulnerable during these tough times. This would be an example of an award to include in college apps, resumes, etc. You will be receiving a certificate for your hours (award type and the number of hours vary). For more information please click on the <q>Learn More</q> button.</p>
             <a class="btn btn-secondary  rounded-pill mt-5" style="margin-bottom: 40px;" href="https://presidentialserviceawards.org/eligibility">Learn More</a>
         </div>
       </div>
@@ -112,23 +146,18 @@
         <div class="row">
           <div class="col-sm">
             <h1>Donate!</h1>
-            <p>Your donations will help us do what we do! The funds will be used for:
-
-              ---- Masks
-                 ----100% cotton fabric (recommended fabric by the CDC)
-              ---- elastics
-              ---- basic sewing supplies such as needles and thread
+            <p>Your donations will help us do what we do! The funds will be used for: Masks, 100% cotton fabric (recommended fabric by the CDC), elastics, basic sewing supplies such as needles and thread.</p>
               
               ​
-              
-              We are also accepting donations of materials. They would be greatly appreciated. </p>
+            <p>We are also accepting donations of materials. They would be greatly appreciated. </p>
               <a class="btn btn-primary  rounded-pill mt-5" href="https://www.gofundme.com/f/masking-a-difference?utm_source=customer&utm_medium=copy_link&utm_campaign=p_cf+share-flow-1">Donate Funds</a>
               <a class="btn btn-primary rounded-pill mt-5" href="https://docs.google.com/forms/d/e/1FAIpQLScvfFyOkifbPec1il901Yv9BlBfsRqfeyD6DmAuFjY9nMDVKQ/viewform">Donate Materials</a>
           </div>
           <div class="col-sm">
             <h1>Sew Masks!</h1>
-            <p>This role is hands-on and very crucial in achieving our goal. Sewing machines are recommended for more efficient production, but hand-sewing is fine as well. We expect at least 10 masks from our volunteers, and those that meet 25, 50, 100, etc. will receive recognition and a reward. All volunteers will have the chance to be featured on our website and social media pages if they are willing. To begin, you can fill out the sign-up form below or contact me or my team personally. Cotton fabric and elastics will be provided by me (pick-up from my house) OR you can use your own materials (would help a lot). </p>
-            <a class="btn btn-primary rounded-pill mt-5" href="https://docs.google.com/forms/d/e/1FAIpQLScvfFyOkifbPec1il901Yv9BlBfsRqfeyD6DmAuFjY9nMDVKQ/viewform">Sign up to Start</a>
+            <p>This role is hands-on and very crucial in achieving our goal. Sewing machines are recommended for more efficient production, but hand-sewing is fine as well. We expect at least 10 masks from our volunteers, and those that meet 25, 50, 100, etc. will receive recognition and a reward. All volunteers will have the chance to be featured on our website and social media pages if they are willing. </p>
+            <p>To begin, you can fill out the sign-up form below or contact me or my team personally. Cotton fabric and elastics will be provided by me (pick-up from my house) OR you can use your own materials (would help a lot). </p>
+            <a class="btn btn-primary rounded-pill mt-5" href="https://docs.google.com/forms/d/e/1FAIpQLScPFaZklLCRuztlVE3q9xWIRTq7I0-1TBUGw4lSZ85T31geqQ/viewform">Sign up to Start</a>
           </div>
           <div class="col-sm">
             <h1>Make Cards!</h1>
@@ -140,58 +169,41 @@
         <div style="margin-top: 5%; margin-bottom: 5%;" class="row">
           <div class="col-sm">
             <h1>Fundrasing Coordinator!</h1>
-            <p>This role is for individuals that can help our program grow by accumulating more donations and finding sources of money as contributions to our program. Selected members will be considered a part of the Executive Team.
+            <p>This role is for individuals that can help our program grow by accumulating more donations and finding sources of money as contributions to our program. Selected members will be considered a part of the Executive Team. <p>
 
+              <h5> Responsibilities include: </h5>
  
-
-              Responsibilities include:
-              
-              Organizing fundraisers (such as sticker fundraisers, baking fundraisers, etc.)
-              
-              Joining the fundraising team on GoFundMe and advertising the link to donate 
-              
-              Reaching out to local businesses for potential donations/ corporate matches for our program
-              
-              ​
-              
-              It is recommended to have connections with adults/businesses, experience with communicating and writing formal emails, and skills with handling finances.</p>
+              <p> Organizing fundraisers (such as sticker fundraisers, baking fundraisers, etc.)</p> 
+              <p> Joining the fundraising team on GoFundMe and advertising the link to donate </p> 
+              <p> Reaching out to local businesses for potential donations/ corporate matches for our program  </p> 
+             
+         
+             
+             <p>It is recommended to have connections with adults/businesses, experience with communicating and writing formal emails, and skills with handling finances.</p>
               <a class="btn btn-primary  rounded-pill mt-5" href="https://docs.google.com/forms/d/1ZDylsTXEwGfMdhKOB6ythFBwifvdUtrtFKEJfS2oveU/viewform?edit_requested=true">Sign-up here</a>
           </div>
         
           <div class="col-sm">
             <h1>Lend Materials!</h1>
-            <p>Some of our volunteers are masters at sewing by hand or know how to use a sewing machine but they do not have one or it is broken! Lending materials would be amazing. Here are the following materials you can lend to us:
-
-              ​
-              
-              A sewing machine
-              
-              Fabric cutter/scissors
-              
-              An iron</p>
-              <a class="btn btn-primary  rounded-pill mt-5" href="https://docs.google.com/forms/d/1HoHHyWG9l6vYvG6mdEkx-7ezHtNEi2HCv4JBK-EUQPI/viewform?edit_requested=true">Sign-up here</a>
+            <p>Some of our volunteers are masters at sewing by hand or know how to use a sewing machine but they do not have one or it is broken! Lending materials would be amazing. </p>
+            <p> Here are the following materials you can lend to us: A sewing machine, fabric cutter/scissors, an iron </p>
+           
+            <a class="btn btn-primary  rounded-pill mt-5" href="https://docs.google.com/forms/d/1HoHHyWG9l6vYvG6mdEkx-7ezHtNEi2HCv4JBK-EUQPI/viewform?edit_requested=true">Sign-up here</a>
           </div>
           <div class="col-sm">
             <h1>Social Media Management!</h1>
-            <p>TThis role has 3 available positions (subject to change) and the volunteers fulfilling this role will be considered a part of the Executive Team.
+            <p>This role has 3 available positions (subject to change) and the volunteers fulfilling this role will be considered a part of the Executive Team. </p>
 
  
 
-              Responsibilities include:
+             <h5>Responsibilities include:</h5> 
               
-              Creating promotional flyers
-              
-              Maintaining an organized calendar on the website
-              
-              Updating our social media pages
-              
-              Reaching various schools and clubs in the area to recruit volunteers
-              
-              Editing promotional videos/ photos to post on social media
-              
-              ​
-              
-              It is recommended to have artistic skills, familiarity with social media/ web design, or experience in video editing.</p>
+              <li> Creating promotional flyers </li>
+              <li> Maintaining an organized calendar on the website </li>
+              <li> Updating our social media pages </li>
+              <li> Reaching various schools and clubs in the area to recruit volunteers </li>
+              <li> Editing promotional videos/ photos to post on social media </li> 
+             <p style="margin-top: 10%;"> It is recommended to have artistic skills, familiarity with social media/ web design, or experience in video editing.</p>
               <a class="btn btn-primary  rounded-pill mt-5" href="https://docs.google.com/forms/d/129iuG5qe9DmnmMLscUAqoKaZA2PNldVOulnRKNfmgkY/closedform">Sign-up here</a>
           </div>
         </div>
@@ -232,92 +244,72 @@
     
   </section>
 
-  <section id="team-info">
+  <section class="masthead text-center text-black" style="margin-bottom: 5%;">
+   
+    <div style="padding-top: 5%;">
+      <h2 class="display-4">Our Current and Potential Partners</h2>
+    
+    </div>
+
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6 order-lg-2">
-          <div class="p-5">
-            <img class="img-fluid rounded-circle" src="img/nityafounder.jpg" alt="">
+
+      <div class="row">
+        <div class="col-sm">
+          <img src="img/partners/kaiser.jpg" alt="">
+        </div>
+        <div class="col-sm">
+          <img src="img/partners/GSLogo1L_edited.jpg" alt="">
+        </div>
+
+      </div>
+      
+        <div class="row">
+          <div class="col-sm">
+            <img src="img/partners/aaci.jpg" alt="">
+          </div>
+          <div class="col-sm">
+            <img src="img/partners/hc and wellness.jpg" alt="">
+          </div>
+          <div class="col-sm">
+            <img src="img/partners/homefirst.png" alt="">
+          </div>
+          <div class="col-sm">
+            <img src="img/partners/hr360.png" alt="">
           </div>
         </div>
-        <div class="col-lg-6 order-lg-1">
-          <div class="p-5">
-            <h2 class="display-4">Founder - Nitya</h2>
-            <p>Everyone is affected by COVID-19 one way or another. Sewing masks at home to donate is not the most unique idea, but it does not have to be unique to be useful. Everyone is doing it, but I wanted to bring those people together to form a community. My mom kept telling me how she donated to a cause in India where they provide groceries and masks to those that cannot afford it or how someone on the news donated 1,000 masks to a hospital. I have heard of numerous individuals and programs donating masks to frontline workers throughout the country. However, I wanted to focus on my home, and that is why I decided to start "Ma(s)king a Difference." I hope to "ma(s)k a difference" for those that make my home and my city a better place. I would love to achieve this goal alongside the members of my community and support our area together.</p>
+
+
+        <div class="row">
+          <div class="col-sm">
+            <img src="img/partners/huckleberry youth programs.png" alt="">
+          </div>
+          <div class="col-sm">
+            <img src="img/partners/police .jpg" alt="">
+          </div>
+          <div class="col-sm">
+            <img src="img/partners/SantaClaraCountyFireDepartmentLogo.jpg" alt="">
+          </div>
+          <div class="col-sm">
+            <img src="img/partners/sccvm.png" alt="">
           </div>
         </div>
-      </div>
+
+        <div class="row">
+          <div class="col-sm">
+            <img src="img/partners/austindisasterrelief.png" alt="">
+          </div>
+          <div class="col-sm">
+            <img src="img/partners/caringhearts-logo-color-2.png" alt="">
+          </div>
+          <div class="col-sm">
+            <img src="img/partners/logo-American-Red-Cross.jpg" alt="">
+          </div>
+        </div>
+  
     </div>
   </section>
 
- 
-
-
-
-  <section>
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6 ">
-            <img src="img/fundraisinggroup.png" alt="">
-        </div>
-        <div style="padding-left: 10%;" class="col-lg-6 ">
-            <h2 class="display-4">Fundraising Team</h2>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div style="padding-top: 10%" class="row align-items-center">
-        <div class="col-lg-6 order-lg-2">
-            <img src="img/PRTeam.png" alt="">
-        </div>
-        <div style="padding-left: 10%;" class="col-lg-6 order-lg-1">
-            <h2 class="display-4">PR Team</h2>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="test2">
-    <div class="container">
-      <div style="padding-top: 10%" class="row align-items-center">
-        <div class="col-lg-6 ">
-            <img src="img/socialmedia.png" alt="">
-        </div>
-        <div style="padding-left: 10%;" class="col-lg-6 ">
-            <h2 class="display-4">Social Media Team</h2>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div style="padding-top: 10%" class="row align-items-center">
-        <div class="col-lg-6 order-lg-2">
-            <img src="img/webeditor.png" alt="">
-        </div>
-        <div style="padding-left: 10%;" class="col-lg-6 order-lg-1">
-            <h2 class="display-4">Web Editor</h2>
-        </div>
-      </div>
-    </div>
-
-  <section>
-    <div style="padding-bottom: 10%;" class="container">
-      <div style="padding-top: 10%;" class="row align-items-center">
-        <div style="padding-left:5%;" class="col-lg-6 ">
-            <img src="img/communications.png" alt="">
-        </div>
-        <div class="col-lg-6 ">
-            <h2 class="display-4">Communications Lead</h2>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  
 
 
   
